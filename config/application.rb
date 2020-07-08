@@ -3,11 +3,11 @@ require_relative 'boot'
 require "rails"
 # Pick the frameworks you want:
 require "active_model/railtie"
-require "active_job/railtie"
+# require "active_job/railtie"
 require "active_record/railtie"
-require "active_storage/engine"
+# require "active_storage/engine"
 require "action_controller/railtie"
-require "action_mailer/railtie"
+# require "action_mailer/railtie"
 # require "action_mailbox/engine"
 # require "action_text/engine"
 require "action_view/railtie"
@@ -31,8 +31,6 @@ module Umbrella
       g.javascripts     false
       g.helper          false
     end
-    # Load AdminUser model
-    config.autoload_paths += %W(#{config.root}/vendor/app/models)
 
     config.action_controller.default_protect_from_forgery = false
     config.active_record.belongs_to_required_by_default = false
